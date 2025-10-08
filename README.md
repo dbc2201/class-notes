@@ -133,8 +133,8 @@ Test-Driven Development (TDD) methodology.
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/dbc2201/class-notes-app.git
-   cd class-notes-app
+   git clone https://github.com/dbc2201/class-notes.git
+   cd class-notes
    ```
 
 2. **Install dependencies**
@@ -309,7 +309,7 @@ Thank you for your interest in contributing! Please follow these guidelines:
    ```
 3. **Add upstream remote**
    ```bash
-   git remote add upstream https://github.com/dbc2201/class-notes-app.git
+   git remote add upstream https://github.com/dbc2201/class-notes.git
    ```
 4. **Create a feature branch**
    ```bash

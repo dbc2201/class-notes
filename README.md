@@ -134,7 +134,7 @@ Test-Driven Development (TDD) methodology.
 1. **Clone the repository**
    ```bash
    git clone https://github.com/dbc2201/class-notes.git
-   cd class-notes-app
+   cd class-notes
    ```
 
 2. **Install dependencies**

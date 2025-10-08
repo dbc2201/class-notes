@@ -1,33 +1,43 @@
-import React, {useId, useState} from "react";
+import {useId} from "react";
+import type {InputProps} from "./InputProps.ts";
 
 /**
- * A self-contained, non-reusable example of an Input component.
- * It manages its own state and does not accept props.
+ * A reusable, controlled Input component for forms.
+ * It accepts props to manage its state and appearance.
  */
-export const Input = () => {
+export const Input = ({
+    label,
+    type = 'text',
+    value,
+    onChange,
+    placeholder,
+    error,
+    disabled = false,
+    required = false
+}: InputProps) => {
     const id = useId();
-    const [value, setValue] = useState("");
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setValue(e.target.value);
-    };
+    const inputClasses = [
+        "input",
+        "input-bordered",
+        "w-full",
+        error ? "input-error" : ""
+    ].filter(Boolean).join(" ");
 
     return (<div className="form-control w-full max-w-xs">
         <label htmlFor={id} className="label">
-            <span className="label-text">Sample Label</span>
+            <span className="label-text">{label}</span>
         </label>
         <input
             id={id}
-            type="text"
+            type={type}
             value={value}
-            onChange={handleChange}
-            placeholder="Type something here..."
-            disabled={true}
-            required={true}
-            className="input input-bordered w-full input-error"
+            onChange={onChange}
+            placeholder={placeholder}
+            disabled={disabled}
+            required={required}
+            className={inputClasses}
         />
-        <span
-            className="text-error text-sm"
-        ></span>
+        {error && <span className="text-error text-sm mt-1">{error}</span>}
     </div>);
 };

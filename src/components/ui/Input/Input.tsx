@@ -24,20 +24,22 @@ export const Input = ({
         error ? "input-error" : ""
     ].filter(Boolean).join(" ");
 
-    return (<div className="form-control w-full max-w-xs">
-        <label htmlFor={id} className="label">
-            <span className="label-text">{label}</span>
-        </label>
-        <input
-            id={id}
-            type={type}
-            value={value}
-            onChange={onChange}
-            placeholder={placeholder}
-            disabled={disabled}
-            required={required}
-            className={inputClasses}
-        />
-        {error && <span className="text-error text-sm mt-1">{error}</span>}
-    </div>);
+    return (
+        <div className="form-control w-full max-w-xs">
+            <label htmlFor={id} className="label">
+                <span className="label-text">{label}</span>
+            </label>
+            <input
+                id={id}
+                type={type}
+                value={value}
+                onChange={onChange}
+                placeholder={placeholder}
+                disabled={disabled}
+                required={required}
+                className={inputClasses}
+            />
+            {error && <span className="text-error text-sm mt-1">{error}</span>}
+        </div>
+    );
 };

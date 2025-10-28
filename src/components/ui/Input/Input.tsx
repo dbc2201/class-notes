@@ -1,28 +1,31 @@
-import {useId} from "react";
-import type {InputProps} from "./InputProps.ts";
+import { useId } from "react";
+import type { InputProps } from "./InputProps.ts";
 
 /**
  * A reusable, controlled Input component for forms.
  * It accepts props to manage its state and appearance.
  */
-export const Input = ({
-    label,
-    type = 'text',
-    value,
-    onChange,
-    placeholder,
-    error,
-    disabled = false,
-    required = false
-}: InputProps) => {
+export default function Input(props: InputProps) {
+    const {
+        label,
+        type = "text",
+        value,
+        onChange,
+        placeholder,
+        error,
+        disabled = false,
+        required = false,
+    } = props;
     const id = useId();
 
     const inputClasses = [
         "input",
         "input-bordered",
         "w-full",
-        error ? "input-error" : ""
-    ].filter(Boolean).join(" ");
+        error ? "input-error" : "",
+    ]
+        .filter(Boolean)
+        .join(" ");
 
     return (
         <div className="form-control w-full max-w-xs">
@@ -42,4 +45,4 @@ export const Input = ({
             {error && <span className="text-error text-sm mt-1">{error}</span>}
         </div>
     );
-};
+}

@@ -1,7 +1,7 @@
 import type {ButtonProps} from "./ButtonProps.ts";
 
 export const Button = ({
-    children,
+    label,
     variant = 'primary',
     size = 'md',
     disabled = false,
@@ -17,7 +17,7 @@ export const Button = ({
 
     return (
         <button type={type} disabled={disabled} onClick={onClick} className={classNames}>
-            {children}
+            {label}
         </button>
     );
 };

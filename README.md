@@ -235,7 +235,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button: FC<ButtonProps> = ({
-  children,
+  label,
   variant = 'primary',
   size = 'md',
   className = '',
@@ -246,7 +246,7 @@ export const Button: FC<ButtonProps> = ({
       className={`btn btn-${variant} btn-${size} ${className}`}
       {...props}
     >
-      {children}
+      {label}
     </button>
   );
 };

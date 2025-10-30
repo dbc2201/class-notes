@@ -1,13 +1,16 @@
-export default function Card() {
+import {Button} from "../Button/Button.tsx";
+import type CardProps from "./CardProps.ts";
+
+export default function Card(props: CardProps) {
     return (
         <div className="card card-bordered bg-base-100 shadow-xl">
             <div className="card-body">
-                <h2 className="card-title">Card Title</h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                <h2 className="card-title">{props.cardTitle}</h2>
+                <p>{props.cardBody}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <Button label={props.cardButtonLabel} variant="primary"></Button>
                 </div>
             </div>
         </div>
     );
-}
+};

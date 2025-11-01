@@ -16,7 +16,7 @@ import type {ButtonProps} from "./ButtonProps.ts";
  *   onClick={() => handleSubmit()}
  * />
  */
-export default function Button(props: ButtonProps) {
+export function Button(props: ButtonProps) {
     const classNames = [
         'btn',
         `btn-${props.variant}`,

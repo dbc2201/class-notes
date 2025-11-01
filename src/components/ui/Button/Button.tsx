@@ -1,23 +1,31 @@
 import type {ButtonProps} from "./ButtonProps.ts";
 
-export const Button = ({
-    label,
-    variant = 'primary',
-    size = 'md',
-    disabled = false,
-    onClick,
-    type = 'button'
-}: ButtonProps) => {
-
+/**
+ * Button - Reusable UI button component
+ *
+ * @param {ButtonProps} props - Component props
+ * @returns {JSX.Element} Rendered component
+ *
+ * @example
+ * <Button
+ *   label="Submit"
+ *   variant="primary"
+ *   size="md"
+ *   type="button"
+ *   disabled={false}
+ *   onClick={() => console.log('clicked')}
+ * />
+ */
+export default function Button(props: ButtonProps) {
     const classNames = [
         'btn',
-        `btn-${variant}`,
-        `btn-${size}`
+        `btn-${props.variant}`,
+        `btn-${props.size}`
     ].join(' ');
 
     return (
-        <button type={type} disabled={disabled} onClick={onClick} className={classNames}>
-            {label}
+        <button type={props.type} disabled={props.disabled} onClick={props.onClick} className={classNames}>
+            {props.label}
         </button>
     );
 };

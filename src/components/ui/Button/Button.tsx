@@ -1,20 +1,10 @@
 import type {ButtonProps} from "./ButtonProps.ts";
 
 /**
- * Button - Reusable UI button component
+ * Renders a reusable button that applies variant and size CSS classes.
  *
- * @param {ButtonProps} props - Component props
- * @returns {JSX.Element} Rendered component
- *
- * @example
- * <Button
- *   label="Submit"
- *   variant="primary"
- *   size="md"
- *   type="button"
- *   disabled={false}
- *   onClick={() => console.log('clicked')}
- * />
+ * @param props - Component props containing `label`, `variant`, `size`, `type`, `disabled`, and `onClick`.
+ * @returns The rendered button element.
  */
 export default function Button(props: ButtonProps) {
     const classNames = [

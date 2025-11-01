@@ -1,4 +1,4 @@
-import { useId } from "react";
+import {useId} from "react";
 import type {InputProps} from "./InputProps.ts";
 
 /**
@@ -26,29 +26,26 @@ import type {InputProps} from "./InputProps.ts";
  */
 export function Input(props: InputProps) {
 
-    const id = useId();
+	const id = useId();
 
-    return (
-        <div>
+	return (
+		<div>
+			<label htmlFor={id} className="label w-full p-[12px]">
+				<span className="label-text">{props.label}</span>
+			</label>
 
-            <label htmlFor={id} className="label w-full p-[12px]">
-                <span className="label-text">{props.label}</span>
-            </label>
+			<input
+				id={id}
+				type={props.type}
+				value={props.value}
+				onChange={props.onChange}
+				placeholder={props.placeholder}
+				disabled={props.disabled}
+				required={props.required}
+				className="input input-bordered block"
+			/>
 
-            <input
-                id={id}
-                type={props.type}
-                value={props.value}
-                onChange={props.onChange}
-                placeholder={props.placeholder}
-                disabled={props.disabled}
-                required={props.required}
-                className="input input-bordered block"
-            />
-
-            {props.error && (
-                <span className="text-error text-sm ">{props.error}</span>
-            )}
-        </div>
-    );
+			{props.error && (<span className="text-error text-sm">{props.error}</span>)}
+		</div>
+	);
 }

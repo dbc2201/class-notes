@@ -1,36 +1,33 @@
+import type {ButtonProps} from "./ButtonProps.ts";
 
-import './button.css';
+/**
+ * Button - Reusable UI button component
+ *
+ * @param {ButtonProps} props - Component props
+ * @returns {JSX.Element} Rendered component
+ *
+ * @example
+ * <Button
+ *   label="Submit"
+ *   variant="primary"
+ *   size="md"
+ *   type="button"
+ *   disabled={false}
+ *   onClick={() => handleSubmit()}
+ * />
+ */
+export function Button(props: ButtonProps) {
+	const variant = props.variant ?? 'primary';
+	const size = props.size ?? 'md';
+	const classNames = [
+		'btn',
+		`btn-${variant}`,
+		`btn-${size}`
+	].join(' ');
 
-export interface ButtonProps {
-  /** Is this the principal call to action on the page? */
-  primary?: boolean;
-  /** What background color to use */
-  backgroundColor?: string;
-  /** How large should the button be? */
-  size?: 'small' | 'medium' | 'large';
-  /** Button contents */
-  label: string;
-  /** Optional click handler */
-  onClick?: () => void;
+	return (
+		<button type={props.type} disabled={props.disabled} onClick={props.onClick} className={classNames}>
+			{props.label}
+		</button>
+	);
 }
-
-/** Primary UI component for user interaction */
-export const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
-}: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-  return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
-    >
-      {label}
-    </button>
-  );
-};

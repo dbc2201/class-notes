@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import type {Meta, StoryObj} from '@storybook/react-vite';
 
-import { Button } from './Button';
+import {Button} from './Button';
 
 const meta = {
-  component: Button,
+	component: Button,
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -11,15 +11,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {
-    label: "label"
-  }
+	args: {
+		label: "Button"
+	}
 };
 
 export const PrimaryMedium: Story = {
-  args: {
-    label: "label",
-    variant: "primary",
-    size: "md"
-  }
+	args: {
+		label: "label", variant: "primary", size: "md"
+	}
 };

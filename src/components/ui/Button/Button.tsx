@@ -13,7 +13,7 @@ import type {ButtonProps} from "./ButtonProps.ts";
  *   size="md"
  *   type="button"
  *   disabled={false}
- *   onClick={() => console.log('clicked')}
+ *   onClick={() => handleSubmit()}
  * />
  */
 export default function Button(props: ButtonProps) {

@@ -14,16 +14,16 @@ import type CardProps from "./CardProps.ts";
  *   cardButtonLabel="Learn More"
  * />
  */
-export default function Card(props: CardProps) {
-    return (
-        <div className="card card-bordered bg-base-100 shadow-xl">
-            <div className="card-body">
-                <h2 className="card-title">{props.cardTitle}</h2>
-                <p>{props.cardBody}</p>
-                <div className="card-actions justify-end">
-                    <Button label={props.cardButtonLabel} variant="primary"></Button>
-                </div>
-            </div>
-        </div>
-    );
+export function Card(props: CardProps) {
+	return (
+		<div className="card card-bordered bg-base-100 shadow-xl">
+			<div className="card-body">
+				<h2 className="card-title">{props.cardTitle}</h2>
+				<p>{props.cardBody}</p>
+				<div className="card-actions justify-end">
+					<Button label={props.cardButtonLabel} variant="primary"></Button>
+				</div>
+			</div>
+		</div>
+	);
 };

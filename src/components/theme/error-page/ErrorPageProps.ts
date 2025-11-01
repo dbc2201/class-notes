@@ -9,4 +9,6 @@ export interface ErrorPageProps {
     errorDesc: string;
     /** The label for the action button */
     errorButtonLabel: string;
+    /** function to be executed on click */
+    onButtonClick: () => void;
 }

@@ -45,7 +45,7 @@ export function Input(props: InputProps) {
 				className="input input-bordered block"
 			/>
 
-			{props.error && (<span className="text-error text-sm ">{props.error}</span>)}
+			{props.error && (<span className="text-error text-sm">{props.error}</span>)}
 		</div>
 	);
 }

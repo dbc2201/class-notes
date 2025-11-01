@@ -4,7 +4,7 @@ export interface InputProps {
 	label: string;
 	type: 'text' | 'email' | 'password' | 'number';
 	value: string | number;
-	onChange: (e: ChangeEvent) => void;
+	onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 	placeholder: string;
 	error?: string;
 	disabled: boolean;

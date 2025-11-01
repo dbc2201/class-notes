@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Button } from './Button';
+import { Input } from './Input';
 
 const meta = {
-  component: Button,
-} satisfies Meta<typeof Button>;
+  component: Input,
+} satisfies Meta<typeof Input>;
 
 export default meta;
 
@@ -12,14 +12,9 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    label: "Button"
-  }
-};
-
-export const PrimaryMedium: Story = {
-  args: {
     label: "label",
-    variant: "primary",
-    size: "md"
+    onChange: () => {},
+    placeholder: "placeholder",
+    error: "error"
   }
 };

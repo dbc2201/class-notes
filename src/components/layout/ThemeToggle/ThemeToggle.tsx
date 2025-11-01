@@ -1,8 +1,9 @@
 /**
- * ThemeToggle - A component to switch between light and dark themes.
+ * ThemeToggle - A component that provides a theme toggle switch.
  *
- * This component uses daisyUI's theme-controller and swap components to provide
- * a toggle switch with sun and moon icons for changing the application's theme.
+ * This component renders a daisyUI swap control with sun and moon icons. 
+ * When toggled, it switches to the "synthwave" theme via daisyUI's theme-controller.
+ * The actual theme switching is handled by daisyUI through the "theme-controller" class.
  *
  * @returns {JSX.Element} The rendered theme toggle switch.
  */

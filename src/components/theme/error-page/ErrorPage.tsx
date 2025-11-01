@@ -18,13 +18,14 @@ import {Button} from "../../ui/Button/Button.tsx";
  *   errorMessage="Oops! Something went wrong."
  *   errorDesc="We couldn't find the page you were looking for."
  *   errorButtonLabel="Go back to Home"
+ *   onButtonClick={() => window.history.back()}
  * />
  * ```
  */
 export function ErrorPage(props: ErrorPageProps) {
     return (
         <div
-            className="flex flex-col h-screen items-center justify-center gap-4 bg-[#E8F1FF] text-center text-black">
+            className="flex flex-col h-screen items-center justify-center gap-4 bg-blue-50 text-center text-black">
             <img
                 src="/man-doing-surprise-gesture-white-background%20(1).jpg"
                 alt="A man with a surprised expression"
@@ -36,7 +37,7 @@ export function ErrorPage(props: ErrorPageProps) {
                 <p className="text-lg text-gray-600">{props.errorDesc}</p>
             </div>
 
-            <Button label={props.errorButtonLabel} variant="primary"/>
+            <Button label={props.errorButtonLabel} variant="primary" onClick={props.onButtonClick}/>
         </div>
     );
 }

@@ -1,7 +1,6 @@
-import type {ReactNode} from "react";
 
 export interface ButtonProps {
-    children: ReactNode;
+    label: string;
     variant?: 'primary' | 'secondary' | 'ghost';
     size?: 'sm' | 'md' | 'lg';
     disabled?: boolean;

@@ -2,44 +2,50 @@ import {useId} from "react";
 import type {InputProps} from "./InputProps.ts";
 
 /**
- * A reusable, controlled Input component for forms.
- * It accepts props to manage its state and appearance.
+ * A reusable and accessible input component with a label and error message display.
+ * All props are strictly required to ensure consistency.
+ *
+ * @param {InputProps} props - The properties for the Input component.
+ * @returns {JSX.Element} The rendered input field with its label and optional error message.
+ *
+ * @example
+ * const [name, setName] = useState('');
+ * const [error, setError] = useState('');
+ *
+ * // Basic usage
+ * <Input
+ *   label="Full Name"
+ *   type="text"
+ *   value={name}
+ *   onChange={(e) => setName(e.target.value)}
+ *   placeholder="John Doe"
+ *   required={true}
+ *   disabled={false}
+ *   error={error}
+ * />
  */
-export const Input = ({
-    label,
-    type = 'text',
-    value,
-    onChange,
-    placeholder,
-    error,
-    disabled = false,
-    required = false
-}: InputProps) => {
-    const id = useId();
+export function Input(props: InputProps) {
 
-    const inputClasses = [
-        "input",
-        "input-bordered",
-        "w-full",
-        error ? "input-error" : ""
-    ].filter(Boolean).join(" ");
+	const id = useId();
 
-    return (
-        <div className="form-control w-full max-w-xs">
-            <label htmlFor={id} className="label">
-                <span className="label-text">{label}</span>
-            </label>
-            <input
-                id={id}
-                type={type}
-                value={value}
-                onChange={onChange}
-                placeholder={placeholder}
-                disabled={disabled}
-                required={required}
-                className={inputClasses}
-            />
-            {error && <span className="text-error text-sm mt-1">{error}</span>}
-        </div>
-    );
-};
+	return (
+		<div>
+			<label htmlFor={id} className="label w-full p-[12px]">
+				<span className="label-text">{props.label}</span>
+			</label>
+
+			<input
+				id={id}
+				type={props.type}
+				value={props.value}
+				onChange={props.onChange}
+				placeholder={props.placeholder}
+				disabled={props.disabled}
+				required={props.required}
+				className="input input-bordered block"
+			/>
+
+			{props.error && (<span className="text-error text-sm">{props.error}</span>)}
+		</div>
+	);
+}

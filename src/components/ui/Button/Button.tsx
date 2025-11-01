@@ -28,4 +28,4 @@ export default function Button(props: ButtonProps) {
             {props.label}
         </button>
     );
-};
+}

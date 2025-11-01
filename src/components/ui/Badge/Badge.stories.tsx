@@ -14,6 +14,7 @@ export const Default: Story = {
   args: {
     text: "text",
     color: "color",
-    onRemove: () => {}
+    variant: "primary",
+    removable: true
   }
 };

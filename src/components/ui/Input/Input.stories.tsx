@@ -13,8 +13,11 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     label: "label",
+    type: "text",
+    value: {},
     onChange: () => {},
     placeholder: "placeholder",
-    error: "error"
+    disabled: true,
+    required: true
   }
 };

@@ -12,9 +12,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    user: {
-        name: "Arnab"
-    },
+    user: {},
     onLogout: () => {}
   }
 };

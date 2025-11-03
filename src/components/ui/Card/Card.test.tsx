@@ -197,8 +197,8 @@ describe('Card Component', () => {
 			const cardBody = root?.querySelector('.card-body');
 			const actions = root?.querySelector('.card-actions');
 
-			expect(root).toContainElement(cardBody);
-			expect(cardBody).toContainElement(actions);
+			expect(root).toContainElement(cardBody as HTMLElement);
+			expect(cardBody).toContainElement(actions as HTMLElement);
 		});
 	});
 

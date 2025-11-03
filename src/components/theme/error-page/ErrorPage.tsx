@@ -17,7 +17,7 @@ import {Button} from "../../ui/Button/Button.tsx";
  * <ErrorPage
  *   errorMessage="Oops! Something went wrong."
  *   errorDesc="We couldn't find the page you were looking for."
- *   errorButtonLabel="Go back to Home"
+ *   buttonLabel="Go back to Home"
  *   onButtonClick={() => window.history.back()}
  * />
  * ```

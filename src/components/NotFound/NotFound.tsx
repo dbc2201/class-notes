@@ -22,10 +22,12 @@ export default function NotFound(props: NotFoundProps) {
         <div className="flex flex-col items-center justify-center min-h-screen py-2 text-center">
             <h1 className="text-6xl font-bold">{props.title}</h1>
             <p className="text-lg mt-4">{props.message}</p>
-            <button className="btn btn-primary mt-6"
-                    onClick={props.onButtonClick}>
-                {props.cardButtonLabel}
-            </button>
+            {props.showButton && (
+                <button className="btn btn-primary mt-6"
+                        onClick={props.onButtonClick}>
+                    {props.cardButtonLabel}
+                </button>
+            )}
         </div>
     );
 };

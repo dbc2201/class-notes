@@ -154,7 +154,7 @@ describe('Badge Component', () => {
 
 		it('renders without onRemove callback when removable is true', () => {
 			const props = makeProps({ removable: true });
-			delete (props as any).onRemove;
+			delete (props as BadgeProps).onRemove;
 
 			expect(() => {
 				render(<Badge {...props} />);
@@ -166,7 +166,7 @@ describe('Badge Component', () => {
 
 		it('does not throw error when clicking remove button without onRemove callback', () => {
 			const props = makeProps({ removable: true });
-			delete (props as any).onRemove;
+			delete (props as BadgeProps).onRemove;
 			render(<Badge {...props} />);
 
 			const removeButton = screen.getByRole('button');

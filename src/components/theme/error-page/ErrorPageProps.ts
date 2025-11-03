@@ -8,7 +8,7 @@ export interface ErrorPageProps {
     /** A detailed description of the error */
     errorDesc: string;
     /** The label for the action button */
-    errorButtonLabel: string;
+    buttonLabel: string;
     /** function to be executed on click */
     onButtonClick: () => void;
 }

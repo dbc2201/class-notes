@@ -37,7 +37,7 @@ export function ErrorPage(props: ErrorPageProps) {
                 <p className="text-lg text-gray-600">{props.errorDesc}</p>
             </div>
 
-            <Button label={props.errorButtonLabel} variant="primary" onClick={props.onButtonClick}/>
+            <Button label={props.buttonLabel} variant="primary" onClick={props.onButtonClick}/>
         </div>
     );
 }

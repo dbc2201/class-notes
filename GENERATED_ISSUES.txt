@@ -1,0 +1,876 @@
+================================================================================
+GENERATED GITHUB ISSUES
+================================================================================
+
+Issue #1: Create ThemeToggle Component
+--------------------------------------------------------------------------------
+## Description
+A toggle component for switching between light and dark themes.
+
+## Component Details
+
+**Complexity**: ⭐⭐
+
+**Location**: `src/components/layout/ThemeToggle/`
+
+**Assigned to**: Rohit Sharma
+
+**Development Phase**: Phase 2
+
+**Props**: `None (uses context)`
+
+**Tests Required**: Theme switching, persistence
+
+**Dependencies**: ThemeContext
+
+## Resources
+
+- [Component Development Order](https://github.com/dbc2201/class-notes/wiki/%F0%9F%8E%AF-Component-Development-Order#layout-components-complexity-)
+- [Component Template](https://github.com/dbc2201/class-notes/wiki/%F0%9F%93%9D-Component-Template)
+- [Testing Strategy](https://github.com/dbc2201/class-notes/wiki/%F0%9F%A7%AA-Testing-Strategy)
+
+## Acceptance Criteria
+
+- [ ] Component created in the correct location
+- [ ] TypeScript types/interfaces defined
+- [ ] All required props/returns implemented
+- [ ] Tests written and passing
+- [ ] Component follows project style guidelines
+- [ ] Storybook story created (if applicable)
+- [ ] Documentation added
+
+## Notes
+
+Please follow the TDD (Test-Driven Development) workflow:
+1. 🔴 RED: Write failing tests first
+2. 🟢 GREEN: Write minimal code to pass tests
+3. 🔵 REFACTOR: Improve code quality
+4. ♻️ REPEAT
+
+---
+*This issue was automatically generated based on the component development order in the wiki.*
+
+
+================================================================================
+
+Issue #2: Create LoginPage Component
+--------------------------------------------------------------------------------
+## Description
+The login page that wraps the LoginForm component and handles authentication flow.
+
+## Component Details
+
+**Complexity**: ⭐⭐
+
+**Location**: `src/pages/LoginPage/`
+
+**Assigned to**: Rohit Sharma
+
+**Development Phase**: Phase 3
+
+**Props**: `None`
+
+**Tests Required**: Login flow, redirection
+
+**Dependencies**: LoginForm, AuthContext
+
+## Resources
+
+- [Component Development Order](https://github.com/dbc2201/class-notes/wiki/%F0%9F%8E%AF-Component-Development-Order#auth-components-complexity-)
+- [Component Template](https://github.com/dbc2201/class-notes/wiki/%F0%9F%93%9D-Component-Template)
+- [Testing Strategy](https://github.com/dbc2201/class-notes/wiki/%F0%9F%A7%AA-Testing-Strategy)
+
+## Acceptance Criteria
+
+- [ ] Component created in the correct location
+- [ ] TypeScript types/interfaces defined
+- [ ] All required props/returns implemented
+- [ ] Tests written and passing
+- [ ] Component follows project style guidelines
+- [ ] Storybook story created (if applicable)
+- [ ] Documentation added
+
+## Notes
+
+Please follow the TDD (Test-Driven Development) workflow:
+1. 🔴 RED: Write failing tests first
+2. 🟢 GREEN: Write minimal code to pass tests
+3. 🔵 REFACTOR: Improve code quality
+4. ♻️ REPEAT
+
+---
+*This issue was automatically generated based on the component development order in the wiki.*
+
+
+================================================================================
+
+Issue #3: Create TagBadge Component
+--------------------------------------------------------------------------------
+## Description
+A specialized badge component for displaying tags with optional remove functionality.
+
+## Component Details
+
+**Complexity**: ⭐⭐
+
+**Location**: `src/components/features/tags/TagBadge/`
+
+**Assigned to**: Rohit Sharma
+
+**Development Phase**: Phase 4
+
+**Props**: `tag, onRemove, onClick, removable`
+
+**Tests Required**: Display, click, remove
+
+**Dependencies**: Badge
+
+## Resources
+
+- [Component Development Order](https://github.com/dbc2201/class-notes/wiki/%F0%9F%8E%AF-Component-Development-Order#tag-components-complexity-)
+- [Component Template](https://github.com/dbc2201/class-notes/wiki/%F0%9F%93%9D-Component-Template)
+- [Testing Strategy](https://github.com/dbc2201/class-notes/wiki/%F0%9F%A7%AA-Testing-Strategy)
+
+## Acceptance Criteria
+
+- [ ] Component created in the correct location
+- [ ] TypeScript types/interfaces defined
+- [ ] All required props/returns implemented
+- [ ] Tests written and passing
+- [ ] Component follows project style guidelines
+- [ ] Storybook story created (if applicable)
+- [ ] Documentation added
+
+## Notes
+
+Please follow the TDD (Test-Driven Development) workflow:
+1. 🔴 RED: Write failing tests first
+2. 🟢 GREEN: Write minimal code to pass tests
+3. 🔵 REFACTOR: Improve code quality
+4. ♻️ REPEAT
+
+---
+*This issue was automatically generated based on the component development order in the wiki.*
+
+
+================================================================================
+
+Issue #4: Create TagInput Component
+--------------------------------------------------------------------------------
+## Description
+An input component for adding and managing tags with autocomplete suggestions.
+
+## Component Details
+
+**Complexity**: ⭐⭐⭐
+
+**Location**: `src/components/features/tags/TagInput/`
+
+**Assigned to**: Arnab Mandal
+
+**Development Phase**: Phase 4
+
+**Props**: `tags, onChange, suggestions`
+
+**Tests Required**: Input, add tag, remove tag, suggestions
+
+**Dependencies**: Input, TagBadge
+
+## Resources
+
+- [Component Development Order](https://github.com/dbc2201/class-notes/wiki/%F0%9F%8E%AF-Component-Development-Order#tag-components-complexity-)
+- [Component Template](https://github.com/dbc2201/class-notes/wiki/%F0%9F%93%9D-Component-Template)
+- [Testing Strategy](https://github.com/dbc2201/class-notes/wiki/%F0%9F%A7%AA-Testing-Strategy)
+
+## Acceptance Criteria
+
+- [ ] Component created in the correct location
+- [ ] TypeScript types/interfaces defined
+- [ ] All required props/returns implemented
+- [ ] Tests written and passing
+- [ ] Component follows project style guidelines
+- [ ] Storybook story created (if applicable)
+- [ ] Documentation added
+
+## Notes
+
+Please follow the TDD (Test-Driven Development) workflow:
+1. 🔴 RED: Write failing tests first
+2. 🟢 GREEN: Write minimal code to pass tests
+3. 🔵 REFACTOR: Improve code quality
+4. ♻️ REPEAT
+
+---
+*This issue was automatically generated based on the component development order in the wiki.*
+
+
+================================================================================
+
+Issue #5: Create NoteCard Component
+--------------------------------------------------------------------------------
+## Description
+A card component for displaying note previews with action buttons.
+
+## Component Details
+
+**Complexity**: ⭐⭐⭐
+
+**Location**: `src/components/features/notes/NoteCard/`
+
+**Assigned to**: Rohit Sharma
+
+**Development Phase**: Phase 4
+
+**Props**: `note, onEdit, onDelete, onClick`
+
+**Tests Required**: Display, actions, click handling
+
+**Dependencies**: Card, TagBadge, Button
+
+## Resources
+
+- [Component Development Order](https://github.com/dbc2201/class-notes/wiki/%F0%9F%8E%AF-Component-Development-Order#note-components-complexity-)
+- [Component Template](https://github.com/dbc2201/class-notes/wiki/%F0%9F%93%9D-Component-Template)
+- [Testing Strategy](https://github.com/dbc2201/class-notes/wiki/%F0%9F%A7%AA-Testing-Strategy)
+
+## Acceptance Criteria
+
+- [ ] Component created in the correct location
+- [ ] TypeScript types/interfaces defined
+- [ ] All required props/returns implemented
+- [ ] Tests written and passing
+- [ ] Component follows project style guidelines
+- [ ] Storybook story created (if applicable)
+- [ ] Documentation added
+
+## Notes
+
+Please follow the TDD (Test-Driven Development) workflow:
+1. 🔴 RED: Write failing tests first
+2. 🟢 GREEN: Write minimal code to pass tests
+3. 🔵 REFACTOR: Improve code quality
+4. ♻️ REPEAT
+
+---
+*This issue was automatically generated based on the component development order in the wiki.*
+
+
+================================================================================
+
+Issue #6: Create NotePreview Component
+--------------------------------------------------------------------------------
+## Description
+A component for previewing note content with truncation and HTML stripping.
+
+## Component Details
+
+**Complexity**: ⭐⭐
+
+**Location**: `src/components/features/notes/NotePreview/`
+
+**Assigned to**: Arnab Mandal
+
+**Development Phase**: Phase 4
+
+**Props**: `content, maxLength`
+
+**Tests Required**: Content truncation, HTML stripping
+
+**Dependencies**: None
+
+## Resources
+
+- [Component Development Order](https://github.com/dbc2201/class-notes/wiki/%F0%9F%8E%AF-Component-Development-Order#note-components-complexity-)
+- [Component Template](https://github.com/dbc2201/class-notes/wiki/%F0%9F%93%9D-Component-Template)
+- [Testing Strategy](https://github.com/dbc2201/class-notes/wiki/%F0%9F%A7%AA-Testing-Strategy)
+
+## Acceptance Criteria
+
+- [ ] Component created in the correct location
+- [ ] TypeScript types/interfaces defined
+- [ ] All required props/returns implemented
+- [ ] Tests written and passing
+- [ ] Component follows project style guidelines
+- [ ] Storybook story created (if applicable)
+- [ ] Documentation added
+
+## Notes
+
+Please follow the TDD (Test-Driven Development) workflow:
+1. 🔴 RED: Write failing tests first
+2. 🟢 GREEN: Write minimal code to pass tests
+3. 🔵 REFACTOR: Improve code quality
+4. ♻️ REPEAT
+
+---
+*This issue was automatically generated based on the component development order in the wiki.*
+
+
+================================================================================
+
+Issue #7: Create NotesList Component
+--------------------------------------------------------------------------------
+## Description
+A list component for displaying multiple note cards with filtering and sorting.
+
+## Component Details
+
+**Complexity**: ⭐⭐⭐⭐
+
+**Location**: `src/components/features/notes/NotesList/`
+
+**Assigned to**: Rohit Sharma
+
+**Development Phase**: Phase 4
+
+**Props**: `notes, onEdit, onDelete, onNoteClick`
+
+**Tests Required**: List rendering, empty state, actions
+
+**Dependencies**: NoteCard
+
+## Resources
+
+- [Component Development Order](https://github.com/dbc2201/class-notes/wiki/%F0%9F%8E%AF-Component-Development-Order#note-components-complexity-)
+- [Component Template](https://github.com/dbc2201/class-notes/wiki/%F0%9F%93%9D-Component-Template)
+- [Testing Strategy](https://github.com/dbc2201/class-notes/wiki/%F0%9F%A7%AA-Testing-Strategy)
+
+## Acceptance Criteria
+
+- [ ] Component created in the correct location
+- [ ] TypeScript types/interfaces defined
+- [ ] All required props/returns implemented
+- [ ] Tests written and passing
+- [ ] Component follows project style guidelines
+- [ ] Storybook story created (if applicable)
+- [ ] Documentation added
+
+## Notes
+
+Please follow the TDD (Test-Driven Development) workflow:
+1. 🔴 RED: Write failing tests first
+2. 🟢 GREEN: Write minimal code to pass tests
+3. 🔵 REFACTOR: Improve code quality
+4. ♻️ REPEAT
+
+---
+*This issue was automatically generated based on the component development order in the wiki.*
+
+
+================================================================================
+
+Issue #8: Create SearchBar Component
+--------------------------------------------------------------------------------
+## Description
+A search bar component with debouncing and clear functionality.
+
+## Component Details
+
+**Complexity**: ⭐⭐⭐
+
+**Location**: `src/components/features/search/SearchBar/`
+
+**Assigned to**: Arnab Mandal
+
+**Development Phase**: Phase 5
+
+**Props**: `value, onChange, onClear, placeholder`
+
+**Tests Required**: Input, debouncing, clear
+
+**Dependencies**: Input
+
+## Resources
+
+- [Component Development Order](https://github.com/dbc2201/class-notes/wiki/%F0%9F%8E%AF-Component-Development-Order#search-components-complexity-)
+- [Component Template](https://github.com/dbc2201/class-notes/wiki/%F0%9F%93%9D-Component-Template)
+- [Testing Strategy](https://github.com/dbc2201/class-notes/wiki/%F0%9F%A7%AA-Testing-Strategy)
+
+## Acceptance Criteria
+
+- [ ] Component created in the correct location
+- [ ] TypeScript types/interfaces defined
+- [ ] All required props/returns implemented
+- [ ] Tests written and passing
+- [ ] Component follows project style guidelines
+- [ ] Storybook story created (if applicable)
+- [ ] Documentation added
+
+## Notes
+
+Please follow the TDD (Test-Driven Development) workflow:
+1. 🔴 RED: Write failing tests first
+2. 🟢 GREEN: Write minimal code to pass tests
+3. 🔵 REFACTOR: Improve code quality
+4. ♻️ REPEAT
+
+---
+*This issue was automatically generated based on the component development order in the wiki.*
+
+
+================================================================================
+
+Issue #9: Create FilterBar Component
+--------------------------------------------------------------------------------
+## Description
+A filter bar component for filtering and sorting notes.
+
+## Component Details
+
+**Complexity**: ⭐⭐⭐⭐
+
+**Location**: `src/components/features/search/FilterBar/`
+
+**Assigned to**: Rohit Sharma
+
+**Development Phase**: Phase 5
+
+**Props**: `selectedTags, onTagSelect, availableTags, sortBy, onSortChange`
+
+**Tests Required**: Tag filtering, sorting, multiple filters
+
+**Dependencies**: TagBadge, Dropdown
+
+## Resources
+
+- [Component Development Order](https://github.com/dbc2201/class-notes/wiki/%F0%9F%8E%AF-Component-Development-Order#search-components-complexity-)
+- [Component Template](https://github.com/dbc2201/class-notes/wiki/%F0%9F%93%9D-Component-Template)
+- [Testing Strategy](https://github.com/dbc2201/class-notes/wiki/%F0%9F%A7%AA-Testing-Strategy)
+
+## Acceptance Criteria
+
+- [ ] Component created in the correct location
+- [ ] TypeScript types/interfaces defined
+- [ ] All required props/returns implemented
+- [ ] Tests written and passing
+- [ ] Component follows project style guidelines
+- [ ] Storybook story created (if applicable)
+- [ ] Documentation added
+
+## Notes
+
+Please follow the TDD (Test-Driven Development) workflow:
+1. 🔴 RED: Write failing tests first
+2. 🟢 GREEN: Write minimal code to pass tests
+3. 🔵 REFACTOR: Improve code quality
+4. ♻️ REPEAT
+
+---
+*This issue was automatically generated based on the component development order in the wiki.*
+
+
+================================================================================
+
+Issue #10: Create RichTextEditor Component
+--------------------------------------------------------------------------------
+## Description
+A rich text editor component using Quill for WYSIWYG editing. **Note**: Most complex component, requires careful testing.
+
+## Component Details
+
+**Complexity**: ⭐⭐⭐⭐⭐
+
+**Location**: `src/components/features/notes/RichTextEditor/`
+
+**Assigned to**: Both students
+
+**Development Phase**: Phase 6
+
+**Props**: `value, onChange, placeholder, readOnly`
+
+**Tests Required**: Content editing, toolbar, formatting
+
+**Dependencies**: Quill library
+
+## Resources
+
+- [Component Development Order](https://github.com/dbc2201/class-notes/wiki/%F0%9F%8E%AF-Component-Development-Order#editor-components-complexity-)
+- [Component Template](https://github.com/dbc2201/class-notes/wiki/%F0%9F%93%9D-Component-Template)
+- [Testing Strategy](https://github.com/dbc2201/class-notes/wiki/%F0%9F%A7%AA-Testing-Strategy)
+
+## Acceptance Criteria
+
+- [ ] Component created in the correct location
+- [ ] TypeScript types/interfaces defined
+- [ ] All required props/returns implemented
+- [ ] Tests written and passing
+- [ ] Component follows project style guidelines
+- [ ] Storybook story created (if applicable)
+- [ ] Documentation added
+
+## Notes
+
+Please follow the TDD (Test-Driven Development) workflow:
+1. 🔴 RED: Write failing tests first
+2. 🟢 GREEN: Write minimal code to pass tests
+3. 🔵 REFACTOR: Improve code quality
+4. ♻️ REPEAT
+
+---
+*This issue was automatically generated based on the component development order in the wiki.*
+
+
+================================================================================
+
+Issue #11: Create TagSelector Component
+--------------------------------------------------------------------------------
+## Description
+A component for selecting and managing tags from a list.
+
+## Component Details
+
+**Complexity**: ⭐⭐⭐⭐
+
+**Location**: `src/components/features/tags/TagSelector/`
+
+**Assigned to**: Arnab Mandal
+
+**Development Phase**: Phase 6
+
+**Props**: `selectedTags, onChange, allTags`
+
+**Tests Required**: Tag selection, creation, removal
+
+**Dependencies**: TagInput, TagBadge
+
+## Resources
+
+- [Component Development Order](https://github.com/dbc2201/class-notes/wiki/%F0%9F%8E%AF-Component-Development-Order#editor-components-complexity-)
+- [Component Template](https://github.com/dbc2201/class-notes/wiki/%F0%9F%93%9D-Component-Template)
+- [Testing Strategy](https://github.com/dbc2201/class-notes/wiki/%F0%9F%A7%AA-Testing-Strategy)
+
+## Acceptance Criteria
+
+- [ ] Component created in the correct location
+- [ ] TypeScript types/interfaces defined
+- [ ] All required props/returns implemented
+- [ ] Tests written and passing
+- [ ] Component follows project style guidelines
+- [ ] Storybook story created (if applicable)
+- [ ] Documentation added
+
+## Notes
+
+Please follow the TDD (Test-Driven Development) workflow:
+1. 🔴 RED: Write failing tests first
+2. 🟢 GREEN: Write minimal code to pass tests
+3. 🔵 REFACTOR: Improve code quality
+4. ♻️ REPEAT
+
+---
+*This issue was automatically generated based on the component development order in the wiki.*
+
+
+================================================================================
+
+Issue #12: Create DashboardPage Component
+--------------------------------------------------------------------------------
+## Description
+The main dashboard page that displays all notes with search and filter functionality.
+
+## Component Details
+
+**Complexity**: ⭐⭐⭐⭐
+
+**Location**: `src/pages/DashboardPage/`
+
+**Assigned to**: Rohit Sharma
+
+**Development Phase**: Phase 7
+
+**Props**: `None`
+
+**Tests Required**: Note loading, search, filter, navigation
+
+**Dependencies**: SearchBar, FilterBar, NotesList
+
+## Resources
+
+- [Component Development Order](https://github.com/dbc2201/class-notes/wiki/%F0%9F%8E%AF-Component-Development-Order#page-components-complexity-)
+- [Component Template](https://github.com/dbc2201/class-notes/wiki/%F0%9F%93%9D-Component-Template)
+- [Testing Strategy](https://github.com/dbc2201/class-notes/wiki/%F0%9F%A7%AA-Testing-Strategy)
+
+## Acceptance Criteria
+
+- [ ] Component created in the correct location
+- [ ] TypeScript types/interfaces defined
+- [ ] All required props/returns implemented
+- [ ] Tests written and passing
+- [ ] Component follows project style guidelines
+- [ ] Storybook story created (if applicable)
+- [ ] Documentation added
+
+## Notes
+
+Please follow the TDD (Test-Driven Development) workflow:
+1. 🔴 RED: Write failing tests first
+2. 🟢 GREEN: Write minimal code to pass tests
+3. 🔵 REFACTOR: Improve code quality
+4. ♻️ REPEAT
+
+---
+*This issue was automatically generated based on the component development order in the wiki.*
+
+
+================================================================================
+
+Issue #13: Create NoteEditorPage Component
+--------------------------------------------------------------------------------
+## Description
+The note editor page for creating and editing notes. **Note**: Most complex page, integrates multiple features.
+
+## Component Details
+
+**Complexity**: ⭐⭐⭐⭐⭐
+
+**Location**: `src/pages/NoteEditorPage/`
+
+**Assigned to**: Both students
+
+**Development Phase**: Phase 7
+
+**Props**: `None (uses route params)`
+
+**Tests Required**: Create, edit, save, validation
+
+**Dependencies**: RichTextEditor, TagSelector, Input, Button
+
+## Resources
+
+- [Component Development Order](https://github.com/dbc2201/class-notes/wiki/%F0%9F%8E%AF-Component-Development-Order#page-components-complexity-)
+- [Component Template](https://github.com/dbc2201/class-notes/wiki/%F0%9F%93%9D-Component-Template)
+- [Testing Strategy](https://github.com/dbc2201/class-notes/wiki/%F0%9F%A7%AA-Testing-Strategy)
+
+## Acceptance Criteria
+
+- [ ] Component created in the correct location
+- [ ] TypeScript types/interfaces defined
+- [ ] All required props/returns implemented
+- [ ] Tests written and passing
+- [ ] Component follows project style guidelines
+- [ ] Storybook story created (if applicable)
+- [ ] Documentation added
+
+## Notes
+
+Please follow the TDD (Test-Driven Development) workflow:
+1. 🔴 RED: Write failing tests first
+2. 🟢 GREEN: Write minimal code to pass tests
+3. 🔵 REFACTOR: Improve code quality
+4. ♻️ REPEAT
+
+---
+*This issue was automatically generated based on the component development order in the wiki.*
+
+
+================================================================================
+
+Issue #14: Create useLocalStorage Hook
+--------------------------------------------------------------------------------
+## Description
+A custom hook for managing localStorage with React state synchronization.
+
+## Component Details
+
+**Complexity**: ⭐⭐⭐
+
+**Location**: `src/hooks/useLocalStorage.ts`
+
+**Assigned to**: Arnab Mandal
+
+**Development Phase**: Phase 8
+
+**Returns**: `[value, setValue]`
+
+**Tests Required**: Get, set, sync across tabs
+
+**Dependencies**: None
+
+## Resources
+
+- [Component Development Order](https://github.com/dbc2201/class-notes/wiki/%F0%9F%8E%AF-Component-Development-Order#custom-hooks-complexity-)
+- [Component Template](https://github.com/dbc2201/class-notes/wiki/%F0%9F%93%9D-Component-Template)
+- [Testing Strategy](https://github.com/dbc2201/class-notes/wiki/%F0%9F%A7%AA-Testing-Strategy)
+
+## Acceptance Criteria
+
+- [ ] Custom Hook created in the correct location
+- [ ] TypeScript types/interfaces defined
+- [ ] All required props/returns implemented
+- [ ] Tests written and passing
+- [ ] Component follows project style guidelines
+- [ ] Storybook story created (if applicable)
+- [ ] Documentation added
+
+## Notes
+
+Please follow the TDD (Test-Driven Development) workflow:
+1. 🔴 RED: Write failing tests first
+2. 🟢 GREEN: Write minimal code to pass tests
+3. 🔵 REFACTOR: Improve code quality
+4. ♻️ REPEAT
+
+---
+*This issue was automatically generated based on the component development order in the wiki.*
+
+
+================================================================================
+
+Issue #15: Create useAuth Hook
+--------------------------------------------------------------------------------
+## Description
+A custom hook for authentication management.
+
+## Component Details
+
+**Complexity**: ⭐⭐⭐⭐
+
+**Location**: `src/hooks/useAuth.ts`
+
+**Assigned to**: Rohit Sharma
+
+**Development Phase**: Phase 8
+
+**Returns**: `{ user, login, logout, isAuthenticated }`
+
+**Tests Required**: Login, logout, persistence
+
+**Dependencies**: AuthContext, authService
+
+## Resources
+
+- [Component Development Order](https://github.com/dbc2201/class-notes/wiki/%F0%9F%8E%AF-Component-Development-Order#custom-hooks-complexity-)
+- [Component Template](https://github.com/dbc2201/class-notes/wiki/%F0%9F%93%9D-Component-Template)
+- [Testing Strategy](https://github.com/dbc2201/class-notes/wiki/%F0%9F%A7%AA-Testing-Strategy)
+
+## Acceptance Criteria
+
+- [ ] Custom Hook created in the correct location
+- [ ] TypeScript types/interfaces defined
+- [ ] All required props/returns implemented
+- [ ] Tests written and passing
+- [ ] Component follows project style guidelines
+- [ ] Storybook story created (if applicable)
+- [ ] Documentation added
+
+## Notes
+
+Please follow the TDD (Test-Driven Development) workflow:
+1. 🔴 RED: Write failing tests first
+2. 🟢 GREEN: Write minimal code to pass tests
+3. 🔵 REFACTOR: Improve code quality
+4. ♻️ REPEAT
+
+---
+*This issue was automatically generated based on the component development order in the wiki.*
+
+
+================================================================================
+
+Issue #16: Create useNotes Hook
+--------------------------------------------------------------------------------
+## Description
+A custom hook for managing notes with CRUD operations.
+
+## Component Details
+
+**Complexity**: ⭐⭐⭐⭐⭐
+
+**Location**: `src/hooks/useNotes.ts`
+
+**Assigned to**: Arnab Mandal
+
+**Development Phase**: Phase 8
+
+**Returns**: `{ notes, createNote, updateNote, deleteNote, loading }`
+
+**Tests Required**: CRUD operations, error handling
+
+**Dependencies**: noteService
+
+## Resources
+
+- [Component Development Order](https://github.com/dbc2201/class-notes/wiki/%F0%9F%8E%AF-Component-Development-Order#custom-hooks-complexity-)
+- [Component Template](https://github.com/dbc2201/class-notes/wiki/%F0%9F%93%9D-Component-Template)
+- [Testing Strategy](https://github.com/dbc2201/class-notes/wiki/%F0%9F%A7%AA-Testing-Strategy)
+
+## Acceptance Criteria
+
+- [ ] Custom Hook created in the correct location
+- [ ] TypeScript types/interfaces defined
+- [ ] All required props/returns implemented
+- [ ] Tests written and passing
+- [ ] Component follows project style guidelines
+- [ ] Storybook story created (if applicable)
+- [ ] Documentation added
+
+## Notes
+
+Please follow the TDD (Test-Driven Development) workflow:
+1. 🔴 RED: Write failing tests first
+2. 🟢 GREEN: Write minimal code to pass tests
+3. 🔵 REFACTOR: Improve code quality
+4. ♻️ REPEAT
+
+---
+*This issue was automatically generated based on the component development order in the wiki.*
+
+
+================================================================================
+
+Issue #17: Create useSearch Hook
+--------------------------------------------------------------------------------
+## Description
+A custom hook for searching and filtering notes.
+
+## Component Details
+
+**Complexity**: ⭐⭐⭐⭐
+
+**Location**: `src/hooks/useSearch.ts`
+
+**Assigned to**: Rohit Sharma
+
+**Development Phase**: Phase 8
+
+**Returns**: `{ filteredNotes, searchQuery, setSearchQuery, filters, setFilters }`
+
+**Tests Required**: Search, filter, sort
+
+**Dependencies**: None
+
+## Resources
+
+- [Component Development Order](https://github.com/dbc2201/class-notes/wiki/%F0%9F%8E%AF-Component-Development-Order#custom-hooks-complexity-)
+- [Component Template](https://github.com/dbc2201/class-notes/wiki/%F0%9F%93%9D-Component-Template)
+- [Testing Strategy](https://github.com/dbc2201/class-notes/wiki/%F0%9F%A7%AA-Testing-Strategy)
+
+## Acceptance Criteria
+
+- [ ] Custom Hook created in the correct location
+- [ ] TypeScript types/interfaces defined
+- [ ] All required props/returns implemented
+- [ ] Tests written and passing
+- [ ] Component follows project style guidelines
+- [ ] Storybook story created (if applicable)
+- [ ] Documentation added
+
+## Notes
+
+Please follow the TDD (Test-Driven Development) workflow:
+1. 🔴 RED: Write failing tests first
+2. 🟢 GREEN: Write minimal code to pass tests
+3. 🔵 REFACTOR: Improve code quality
+4. ♻️ REPEAT
+
+---
+*This issue was automatically generated based on the component development order in the wiki.*
+
+
+================================================================================
+
+✅ Generated 17 issues
+✅ Issues data saved to /tmp/github_issues.json
+
+⚠️  NOTE: These issues need to be created manually on GitHub as the automation
+   tools don't have permission to create issues directly.

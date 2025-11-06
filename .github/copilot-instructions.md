@@ -167,12 +167,12 @@ describe('Button component', () => {
 
 ```bash
 npm install              # Install dependencies
+npm install              # Install dependencies
 npm run dev              # Start development server (http://localhost:5173)
 npm run build            # Build for production
 npm run preview          # Preview production build
 npm run lint             # Run ESLint
-npm run test             # Run tests in watch mode
-npm run test:watch       # Run tests with watch mode
+npm run test             # Run tests in watch mode (default)
 npm run storybook        # Start Storybook on port 6006
 ```
 

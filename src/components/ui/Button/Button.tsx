@@ -26,7 +26,10 @@ export function Button(props: ButtonProps) {
 	].join(' ');
 
 	return (
-		<button type={props.type} disabled={props.disabled} onClick={props.onClick} className={classNames}>
+		<button type={props.type}
+                disabled={props.disabled}
+                onClick={props.onClick}
+                className={classNames}>
 			{props.label}
 		</button>
 	);

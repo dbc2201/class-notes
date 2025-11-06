@@ -14,6 +14,7 @@ describe('Button Component', () => {
         expect(buttonElement).toHaveAttribute('type', 'button');
     });
 
+
     it('should render label correctly', () => {
         render(<Button label="Submit" />);
 

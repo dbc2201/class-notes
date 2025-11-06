@@ -25,18 +25,18 @@ describe('Button Component', () => {
 
     it('should apply variant and size classes correctly', () => {
         render(
-            <Button variant="secondary" size="lg">
+            <Button label="Large Button" variant="secondary" size="lg">
             </Button>
         );
 
-        const buttonElement = screen.getByRole('button', { name: /large button/i });
+        const buttonElement = screen.getByRole('button');
 
         expect(buttonElement).toHaveClass('btn-secondary');
         expect(buttonElement).toHaveClass('btn-lg');
     });
 
     it('should call the onClick handler when clicked', () => {
-        const handleClick = jest.fn();
+        const handleClick = vi.fn();
         render(<Button label="Clickable" onClick={handleClick} />);
 
         const buttonElement = screen.getByRole('button', { name: /clickable/i });
@@ -54,7 +54,7 @@ describe('Button Component', () => {
     });
 
     it('should not call onClick handler when disabled', () => {
-        const handleClick = jest.fn();
+        const handleClick = vi.fn();
         render(<Button label="Disabled" onClick={handleClick} disabled />);
 
         const buttonElement = screen.getByRole('button', { name: /disabled/i });

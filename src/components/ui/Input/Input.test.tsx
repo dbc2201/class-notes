@@ -12,7 +12,7 @@ describe('Input Component', () => {
 		onChange: vi.fn(),
 		placeholder: 'John Doe',
 		disabled: false,
-		required: true,
+		required: true ,
 		...overrides,
 	});
 

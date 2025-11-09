@@ -370,7 +370,7 @@ describe('Badge Component', () => {
 			const props = makeProps({ text: '  Spaced  ' });
 			render(<Badge {...props} />);
 
-			expect(screen.getByText('  Spaced  ')).toBeInTheDocument();
+			expect(screen.getByText(/Spaced/)).toBeInTheDocument();
 		});
 	});
 

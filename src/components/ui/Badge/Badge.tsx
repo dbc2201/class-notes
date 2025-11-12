@@ -22,7 +22,7 @@ export function Badge(props: BadgeProps) {
 
 	return (
 		<div className={badgeClasses}>
-			<span>{props.text}</span>
+			<span className="whitespace-pre-wrap">{props.text}</span>
 			{removable && (<button onClick={props.onRemove} className="btn btn-ghost btn-xs">
 				✕
 			</button>)}

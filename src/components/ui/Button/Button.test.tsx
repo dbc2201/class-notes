@@ -18,16 +18,19 @@ describe('Button Component', () => {
     it('should render label correctly', () => {
         render(<Button label="Submit" />);
 
-        const buttonElement = screen.getByRole('button');
-        const childElement = screen.getByText(/submit/i);
+        const buttonElement = screen.getByRole('button', { name: /submit/i });
 
-        expect(buttonElement).toContainElement(childElement);
+        expect(buttonElement).toBeInTheDocument();
+        expect(buttonElement).toHaveTextContent('Submit');
     });
 
     it('should apply variant and size classes correctly', () => {
         render(
-            <Button label="Large Button" variant="secondary" size="lg">
-            </Button>
+            <Button 
+                label="Large Button"
+                variant="secondary" 
+                size="lg"
+            />
         );
 
         const buttonElement = screen.getByRole('button');
@@ -37,7 +40,7 @@ describe('Button Component', () => {
     });
 
     it('should call the onClick handler when clicked', () => {
-        const handleClick = vi.fn();
+        const handleClick = jest.fn();
         render(<Button label="Clickable" onClick={handleClick} />);
 
         const buttonElement = screen.getByRole('button', { name: /clickable/i });
@@ -55,7 +58,7 @@ describe('Button Component', () => {
     });
 
     it('should not call onClick handler when disabled', () => {
-        const handleClick = vi.fn();
+        const handleClick = jest.fn();
         render(<Button label="Disabled" onClick={handleClick} disabled />);
 
         const buttonElement = screen.getByRole('button', { name: /disabled/i });

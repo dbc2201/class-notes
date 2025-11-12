@@ -6,7 +6,7 @@ import {Button} from "../../../components/ui/Button/Button.tsx";
 describe('Button component', () => {
 	it('should render correctly with label', () => {
 		// Arrange
-		render(<Button>Click me</Button>);
+		render(<Button label="Click me" />);
 
 		// Act
 		const buttonElement = screen.getByRole('button', {name: /click me/i});
@@ -17,7 +17,7 @@ describe('Button component', () => {
 
 	it('should apply default classes when no props are provided', () => {
 		// Arrange
-		render(<Button>Default</Button>);
+		render(<Button label="Default" />);
 
 		// Act
 		const buttonElement = screen.getByRole('button', {name: /default/i});
@@ -28,7 +28,7 @@ describe('Button component', () => {
 
 	it('should apply variant and size classes correctly', () => {
 		// Arrange
-		render(<Button variant="secondary" size="lg">Styled Button</Button>);
+		render(<Button label="Styled Button" variant="secondary" size="lg" />);
 
 		// Act
 		const buttonElement = screen.getByRole('button', {name: /styled button/i});
@@ -42,7 +42,7 @@ describe('Button component', () => {
 		// Arrange
 		const user = userEvent.setup();
 		const handleClick = vi.fn();
-		render(<Button onClick={handleClick}>Clickable</Button>);
+		render(<Button label="Clickable" onClick={handleClick} />);
 		const buttonElement = screen.getByRole('button', {name: /clickable/i});
 
 		// Act
@@ -56,7 +56,7 @@ describe('Button component', () => {
 		// Arrange
 		const user = userEvent.setup();
 		const handleClick = vi.fn();
-		render(<Button onClick={handleClick} disabled>Disabled</Button>);
+		render(<Button label="Disabled" onClick={handleClick} disabled />);
 		const buttonElement = screen.getByRole('button', {name: /disabled/i});
 
 		// Act

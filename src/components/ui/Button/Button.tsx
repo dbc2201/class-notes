@@ -19,6 +19,7 @@ import type {ButtonProps} from "./ButtonProps.ts";
 export function Button(props: ButtonProps) {
 	const variant = props.variant ?? 'primary';
 	const size = props.size ?? 'md';
+	const type = props.type ?? 'button';
 	const classNames = [
 		'btn',
 		`btn-${variant}`,
@@ -26,7 +27,10 @@ export function Button(props: ButtonProps) {
 	].join(' ');
 
 	return (
-		<button type={props.type} disabled={props.disabled} onClick={props.onClick} className={classNames}>
+		<button type={type}
+                disabled={props.disabled}
+                onClick={props.onClick}
+                className={classNames}>
 			{props.label}
 		</button>
 	);

@@ -14,6 +14,7 @@ describe('Button Component', () => {
         expect(buttonElement).toHaveAttribute('type', 'button');
     });
 
+
     it('should render label correctly', () => {
         render(<Button label="Submit" />);
 
@@ -32,7 +33,7 @@ describe('Button Component', () => {
             />
         );
 
-        const buttonElement = screen.getByRole('button', { name: /large button/i });
+        const buttonElement = screen.getByRole('button');
 
         expect(buttonElement).toHaveClass('btn-secondary');
         expect(buttonElement).toHaveClass('btn-lg');

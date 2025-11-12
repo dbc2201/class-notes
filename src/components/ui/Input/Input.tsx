@@ -38,7 +38,9 @@ export function Input(props: InputProps) {
 			<input
 				id={id}
 				type={props.type}
-				value={props.value}
+				value={typeof props.value === "string" || typeof props.value === "number"
+                    ? props.value
+                    : ""}
 				onChange={(e) => {
 					// Prevent onChange from firing when the input is disabled.
 					if (!props.disabled) {

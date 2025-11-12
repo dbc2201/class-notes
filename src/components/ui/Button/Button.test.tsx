@@ -4,7 +4,7 @@ import { Button } from './Button';
 
 describe('Button Component', () => {
     it('should render the button with default props', () => {
-        render(<Button>Click Me</Button>);
+        render(<Button label="Click Me" />);
 
         const buttonElement = screen.getByRole('button', { name: /click me/i });
 
@@ -14,27 +14,26 @@ describe('Button Component', () => {
         expect(buttonElement).toHaveAttribute('type', 'button');
     });
 
+
     it('should render label correctly', () => {
-        render(
-            <Button>
-                <span>Submit</span>
-            </Button>
-        );
+        render(<Button label="Submit" />);
 
-        const buttonElement = screen.getByRole('button');
-        const childElement = screen.getByText('Submit');
+        const buttonElement = screen.getByRole('button', { name: /submit/i });
 
-        expect(buttonElement).toContainElement(childElement);
+        expect(buttonElement).toBeInTheDocument();
+        expect(buttonElement).toHaveTextContent('Submit');
     });
 
     it('should apply variant and size classes correctly', () => {
         render(
-            <Button variant="secondary" size="lg">
-                Large Button
-            </Button>
+            <Button 
+                label="Large Button"
+                variant="secondary" 
+                size="lg"
+            />
         );
 
-        const buttonElement = screen.getByRole('button', { name: /large button/i });
+        const buttonElement = screen.getByRole('button');
 
         expect(buttonElement).toHaveClass('btn-secondary');
         expect(buttonElement).toHaveClass('btn-lg');
@@ -42,7 +41,7 @@ describe('Button Component', () => {
 
     it('should call the onClick handler when clicked', () => {
         const handleClick = jest.fn();
-        render(<Button onClick={handleClick}>Clickable</Button>);
+        render(<Button label="Clickable" onClick={handleClick} />);
 
         const buttonElement = screen.getByRole('button', { name: /clickable/i });
         fireEvent.click(buttonElement);
@@ -51,7 +50,7 @@ describe('Button Component', () => {
     });
 
     it('should be disabled when the disabled prop is true', () => {
-        render(<Button disabled>Disabled Button</Button>);
+        render(<Button label="Disabled Button" disabled />);
 
         const buttonElement = screen.getByRole('button', { name: /disabled button/i });
 
@@ -60,9 +59,7 @@ describe('Button Component', () => {
 
     it('should not call onClick handler when disabled', () => {
         const handleClick = jest.fn();
-        render(<Button onClick={handleClick} disabled>
-            Disabled
-        </Button>);
+        render(<Button label="Disabled" onClick={handleClick} disabled />);
 
         const buttonElement = screen.getByRole('button', { name: /disabled/i });
         fireEvent.click(buttonElement);
@@ -71,7 +68,7 @@ describe('Button Component', () => {
     });
 
     it('should have the correct type attribute', () => {
-        render(<Button type="submit">Submit</Button>);
+        render(<Button label="Submit" type="submit" />);
         const buttonElement = screen.getByRole('button', { name: /submit/i });
         expect(buttonElement).toHaveAttribute('type', 'submit');
     });

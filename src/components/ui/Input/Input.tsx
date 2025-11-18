@@ -2,8 +2,9 @@ import {useId} from "react";
 import type {InputProps} from "./InputProps.ts";
 
 /**
- * A reusable and accessible input component with a label and error message display.
- * All props are strictly required to ensure consistency.
+ * A reusable and accessible input component with a label and error message display. It ensures that
+ * the `onChange` event does not fire when the input is disabled, providing a more robust and
+ * predictable behavior.  All props are strictly required to ensure consistency.
  *
  * @param {InputProps} props - The properties for the Input component.
  * @returns {JSX.Element} The rendered input field with its label and optional error message.
@@ -37,8 +38,15 @@ export function Input(props: InputProps) {
 			<input
 				id={id}
 				type={props.type}
-				value={props.value}
-				onChange={props.onChange}
+				value={typeof props.value === "string" || typeof props.value === "number"
+                    ? props.value
+                    : ""}
+				onChange={(e) => {
+					// Prevent onChange from firing when the input is disabled.
+					if (!props.disabled) {
+						props.onChange(e);
+					}
+				}}
 				placeholder={props.placeholder}
 				disabled={props.disabled}
 				required={props.required}

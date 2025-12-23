@@ -1,7 +1,8 @@
-export default interface HeaderProps{
+export default interface HeaderProps {
     user: User | null;
     onLogout: () => void;
 }
-interface User{
+
+interface User {
     name: string,
 }

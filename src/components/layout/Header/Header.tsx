@@ -21,7 +21,8 @@ export default function Header(props: Readonly<HeaderProps>) {
                 <div className="flex-none inline-flex align-items-center justify-content-space-around">
                     <button className="btn btn-square btn-ghost inline-block h-5 w-5 stroke-current"
                             onClick={props.onLogout}>
-                        <img className="" src={`https://placehold.co/24x24?text=${props.user?.name.charAt(0)}`} alt=""/>
+                        <img className="" src={`https://placehold.co/24x24?text=${props.user?.name.charAt(0)}`}
+                             alt={`${props.user?.name || 'User'} profile`}/>
                     </button>
                 </div>
             </header>

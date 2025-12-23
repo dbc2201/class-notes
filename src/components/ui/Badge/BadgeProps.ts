@@ -3,5 +3,6 @@ export interface BadgeProps {
     color: string,
     variant: 'primary' | 'secondary' | 'accent' | 'ghost',
     removable: boolean,
-    onRemove?: () => void
+    onRemove?: () => void,
+    onClick?: () => void
 }

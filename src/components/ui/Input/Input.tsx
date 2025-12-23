@@ -25,35 +25,35 @@ import type {InputProps} from "./InputProps.ts";
  *   error={error}
  * />
  */
-export function Input(props: InputProps) {
+export function Input(props: Readonly<InputProps>) {
 
-	const id = useId();
+    const id = useId();
 
-	return (
-		<div>
-			<label htmlFor={id} className="label w-full p-[12px]">
-				<span className="label-text">{props.label}</span>
-			</label>
+    return (
+        <div>
+            <label htmlFor={id} className="label w-full p-[12px]">
+                <span className="label-text">{props.label}</span>
+            </label>
 
-			<input
-				id={id}
-				type={props.type}
-				value={typeof props.value === "string" || typeof props.value === "number"
+            <input
+                id={id}
+                type={props.type}
+                value={typeof props.value === "string" || typeof props.value === "number"
                     ? props.value
                     : ""}
-				onChange={(e) => {
-					// Prevent onChange from firing when the input is disabled.
-					if (!props.disabled) {
-						props.onChange(e);
-					}
-				}}
-				placeholder={props.placeholder}
-				disabled={props.disabled}
-				required={props.required}
-				className="input input-bordered block"
-			/>
+                onChange={(e) => {
+                    // Prevent onChange from firing when the input is disabled.
+                    if (!props.disabled) {
+                        props.onChange(e);
+                    }
+                }}
+                placeholder={props.placeholder}
+                disabled={props.disabled}
+                required={props.required}
+                className="input input-bordered block"
+            />
 
-			{props.error && (<span className="text-error text-sm">{props.error}</span>)}
-		</div>
-	);
+            {props.error && (<span className="text-error text-sm">{props.error}</span>)}
+        </div>
+    );
 }

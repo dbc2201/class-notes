@@ -1,4 +1,4 @@
 export interface NotePreviewProps {
-    content: string;
+    content?: string;
     maxLength: number;
 }

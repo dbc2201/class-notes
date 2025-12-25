@@ -13,14 +13,11 @@ import type {NotePreviewProps} from "./NotePreviewProps.ts";
  */
 export function NotePreview(props: Readonly<NotePreviewProps>) {
     const contents = props.content ?? "";
-    const previewText = contents.length > props.maxLength
-        ? contents.slice(0, props.maxLength)
-        : contents;
 
     return (
         <div className="line-clamp-3 text-base-content">
             <p>
-                {previewText}
+                {contents}
             </p>
         </div>
     );

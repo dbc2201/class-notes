@@ -16,16 +16,22 @@ import {LoginForm} from "../../components/features/auth/LoginForm/LoginForm.tsx"
  */
 
 export function LoginPage() {
+
+    const handleLogin=()=>{
+        // TODO: integrate auth flow later
+        console.log("Login Clicked");
+    }
+    const handleError=()=>{
+        console.error("Login Failed");
+    }
     return (<div className="min-h-screen flex items-center justify-center bg-base-200">
             <LoginForm
                 cardTitle="Login"
                 cardButtonLabel="Sign In"
                 isLoading={false}
                 error=""
-                onLogin={() => {
-                }}
-                onError={() => {
-                }}
+                onLogin={handleLogin}
+                onError={handleError}
             />
         </div>);
 }

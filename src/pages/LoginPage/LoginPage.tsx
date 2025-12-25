@@ -1,3 +1,4 @@
+import {useEffect} from "react";
 import {LoginForm} from "../../components/features/auth/LoginForm/LoginForm.tsx";
 
 /**
@@ -17,13 +18,19 @@ import {LoginForm} from "../../components/features/auth/LoginForm/LoginForm.tsx"
 
 export function LoginPage() {
 
+    // Step 1: Dummy login handler
     const handleLogin=()=>{
-        // TODO: integrate auth flow later
+        // later: API call, auth context, redirect
         console.log("Login Clicked");
     }
+    // Step 2: Dummy error handler
     const handleError=()=>{
         console.error("Login Failed");
     }
+    useEffect(() => {
+        console.log("LoginPage Mounted");
+        handleLogin();
+    }, []);
     return (<div className="min-h-screen flex items-center justify-center bg-base-200">
             <LoginForm
                 cardTitle="Login"

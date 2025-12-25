@@ -19,12 +19,12 @@ import {LoginForm} from "../../components/features/auth/LoginForm/LoginForm.tsx"
 export function LoginPage() {
 
     // Step 1: Dummy login handler
-    const handleLogin=()=>{
+    const handleLogin = () => {
         // later: API call, auth context, redirect
         console.log("Login Clicked");
     }
     // Step 2: Dummy error handler
-    const handleError=()=>{
+    const handleError = () => {
         console.error("Login Failed");
     }
     useEffect(() => {
@@ -32,13 +32,13 @@ export function LoginPage() {
         handleLogin();
     }, []);
     return (<div className="min-h-screen flex items-center justify-center bg-base-200">
-            <LoginForm
-                cardTitle="Login"
-                cardButtonLabel="Sign In"
-                isLoading={false}
-                error=""
-                onLogin={handleLogin}
-                onError={handleError}
-            />
-        </div>);
+        <LoginForm
+            cardTitle="Login"
+            cardButtonLabel="Sign In"
+            isLoading={false}
+            error=""
+            onLogin={handleLogin}
+            onError={handleError}
+        />
+    </div>);
 }

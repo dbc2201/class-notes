@@ -4,7 +4,7 @@ export interface Note {
     content: string;
     author: string;
     createdAt: string;
-    tag: string;
+    tag: string[];
 }
 
 export interface NoteCardProps {

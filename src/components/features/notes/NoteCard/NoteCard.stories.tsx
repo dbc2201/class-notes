@@ -5,7 +5,7 @@ import { NoteCard } from './NoteCard';
 const mockNote = {
   id: "1",
   title: "Learning React",
-  content: "React is awesome...",
+  content: "React is awesome...with dbc",
   tags: ["react", "typescript"],
 
   author: "Rohit Sharma",

@@ -24,6 +24,11 @@ export function NoteCard(props: Readonly<NoteCardProps>) {
                     />
                 </div>
             </div>
+            {/* Content */}
+            <div className="mt-3 text-sm text-base-content cursor-pointer"
+            onClick={() => props.onClick(props.note.id)}>
+                {props.note.content ?? "No content available."}
+            </div>
         </div>
     </div>);
 }

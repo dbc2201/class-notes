@@ -22,6 +22,12 @@ export function NoteCard(props: Readonly<NoteCardProps>) {
                                 }}
                             />))}
                     </div>)}
+                {/* Metadata */}
+                <div className="mt-4 flex justify-between text-sm text-gray-500">
+                    <span>By {props.note.author}</span>
+                    <span>{props.note.createdAt}</span>
+                </div>
+
 
 
                 <div className="flex gap-2">

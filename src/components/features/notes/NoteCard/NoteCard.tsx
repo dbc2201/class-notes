@@ -3,14 +3,31 @@ import type {NoteCardProps} from "./NoteCardProps.ts";
 import {TagBadge} from "../../tags/TagBadge/TagBadge.tsx";
 
 /**
- * A component that displays a single note card with title, tags, content, and actions.
+ * A component that displays a single note card with title, tags, metadata, and actions.
  *
  * @param props - The properties for the NoteCard component.
- * @param props.note - The note object containing details like id, title, content, and tags.
+ * @param props.note - The note object containing details like id, title, tags, author, and creation date.
  * @param props.onEdit - Callback function triggered when the edit button is clicked.
  * @param props.onDelete - Callback function triggered when the delete button is clicked.
  * @param props.onClick - Callback function triggered when the note content is clicked.
- * @returns A React component representing the note card.
+ * @param props.onClick - Callback function triggered when the card is clicked.
+ *
+ * @example
+ * ```tsx
+ * <NoteCard
+ *   note={{
+ *     id: '1',
+ *     title: 'My Note',
+ *     tags: ['React', 'TypeScript'],
+ *     author: 'John Doe',
+ *     createdAt: '2026-01-01'
+ *   }}
+ *   onEdit={(id) => console.log('Edit', id)}
+ *   onDelete={(id) => console.log('Delete', id)}
+ *   onClick={(id) => console.log('Clicked', id)}
+ * />
+ * ```
+ * * @returns A React component representing the note card.
  */
 export function NoteCard(props: Readonly<NoteCardProps>) {
     return (<div className="card card-bordered bg-base-100 shadow-xl">

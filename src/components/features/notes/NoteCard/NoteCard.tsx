@@ -9,7 +9,6 @@ import {TagBadge} from "../../tags/TagBadge/TagBadge.tsx";
  * @param props.note - The note object containing details like id, title, tags, author, and creation date.
  * @param props.onEdit - Callback function triggered when the edit button is clicked.
  * @param props.onDelete - Callback function triggered when the delete button is clicked.
- * @param props.onClick - Callback function triggered when the note content is clicked.
  * @param props.onClick - Callback function triggered when the card is clicked.
  *
  * @example
@@ -27,7 +26,7 @@ import {TagBadge} from "../../tags/TagBadge/TagBadge.tsx";
  *   onClick={(id) => console.log('Clicked', id)}
  * />
  * ```
- * * @returns A React component representing the note card.
+ *  @returns A React component representing the note card.
  */
 export function NoteCard(props: Readonly<NoteCardProps>) {
     return (<div

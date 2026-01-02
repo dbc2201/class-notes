@@ -30,7 +30,8 @@ import {TagBadge} from "../../tags/TagBadge/TagBadge.tsx";
  * * @returns A React component representing the note card.
  */
 export function NoteCard(props: Readonly<NoteCardProps>) {
-    return (<div className="card card-bordered bg-base-100 shadow-xl">
+    return (<div
+        className="card card-bordered bg-base-100 shadow-xl">
         {/* Header */}
         <div className="card-body p-4">
             <div className="flex items-center justify-between">

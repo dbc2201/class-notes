@@ -1,5 +1,15 @@
 import type {DropdownProps} from "./DropdownProps.ts";
 
+/**
+ * A generic Dropdown component that renders a trigger button and a list of menu items.
+ *
+ * This component utilizes CSS classes (likely from a UI library like DaisyUI) to handle the display logic.
+ *
+ * @param props - The configuration properties for the dropdown.
+ * @param props.trigger - The content (text or ReactNode) to be displayed inside the trigger button.
+ * @param props.items - An array of menu items to display. Each item requires a `label`, `value`, and `onClick` handler.
+ * @returns A JSX element representing the dropdown structure.
+ */
 export function Dropdown(props: Readonly<DropdownProps>) {
     return (<div className="dropdown">
         {/*Trigger*/}

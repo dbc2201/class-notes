@@ -11,7 +11,11 @@ import type {DropdownProps} from "./DropdownProps.ts";
  * @returns A JSX element representing the dropdown structure.
  */
 export function Dropdown(props: Readonly<DropdownProps>) {
-    return (<div className="dropdown">
+    const positionClass=props.position
+        ? `dropdown-${props.position}`
+        :'dropdown-bottom';
+
+    return (<div className={`dropdown ${positionClass}`}>
         {/*Trigger*/}
         <button type="button" className="btn" tabIndex={0}>
             {props.trigger}

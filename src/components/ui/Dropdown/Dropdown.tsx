@@ -15,7 +15,7 @@ export function Dropdown(props: Readonly<DropdownProps>) {
         ? `dropdown-${props.position}`
         :'dropdown-bottom';
 
-    return (<div className={`dropdown ${positionClass}`}>
+    return (<div className={['dropdown', positionClass].join('')}>
         {/*Trigger*/}
         <button type="button" className="btn" tabIndex={0}>
             {props.trigger}

@@ -56,6 +56,7 @@ export function Input(props: Readonly<InputProps>) {
                 placeholder={props.placeholder}
                 disabled={props.disabled}
                 required={props.required}
+                aria-label={props.ariaLabel}
                 className={`input input-bordered block w-full ${props.className ?? ""}`}
             />
 

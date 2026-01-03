@@ -26,7 +26,7 @@ import type {SearchBarProps} from "./SearchBarProps";
 export function SearchBar(props: Readonly<SearchBarProps>) {
     return (
         <div className="w-full max-w-sm">
-            <div className="relative w-full" role="search" aria-label="Search">
+            <div className="relative w-full">
 
                 {/* Search icon */}
                 <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none z-10">
@@ -53,6 +53,7 @@ export function SearchBar(props: Readonly<SearchBarProps>) {
                 {/* Input */}
                 <Input
                     hideLabel
+                    ariaLabel="Search"
                     type="text"
                     value={props.value}
                     placeholder={props.placeholder}

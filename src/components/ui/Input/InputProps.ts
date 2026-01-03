@@ -11,4 +11,5 @@ export interface InputProps {
     required: boolean;
     className?: string;
     hideLabel?: boolean;
+    ariaLabel?: string;
 }

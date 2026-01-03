@@ -23,8 +23,8 @@ import type {InputProps} from "./InputProps.ts";
  *   required={true}
  *   disabled={false}
  *   error={error}
- *   className={in parent component developer can add extra classes along with defaults};
- *   hideLabel={this is used to hide label intentionally}
+ *   className="my-custom-class" // Add extra classes via className.
+ *   hideLabel={true} // Set hideLabel to true to hide the label.
  * />
  */
 export function Input(props: Readonly<InputProps>) {

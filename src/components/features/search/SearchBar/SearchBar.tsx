@@ -1,6 +1,28 @@
 import {Input} from "../../../ui/Input/Input";
 import type {SearchBarProps} from "./SearchBarProps";
 
+/**
+ * A specialized search bar component that provides a consistent search experience.
+ * It features a search icon for visual affordance and a clear button that appears
+ * when there is input, allowing users to easily reset the search query.
+ *
+ * @param {Readonly<SearchBarProps>} props - The properties for the SearchBar component.
+ * @param {string} props.value - The current string value of the search input.
+ * @param {string} props.placeholder - The placeholder text to display when the input is empty.
+ * @param {(value: string) => void} props.onChange - Callback that receives the new value whenever the user types.
+ * @param {() => void} props.onClear - Callback that is triggered when the user clicks the clear button.
+ * @returns {JSX.Element} The rendered search bar component.
+ *
+ * @example
+ * const [searchTerm, setSearchTerm] = useState('');
+ *
+ * <SearchBar
+ *   value={searchTerm}
+ *   onChange={setSearchTerm}
+ *   onClear={() => setSearchTerm('')}
+ *   placeholder="Search for items..."
+ * />
+ */
 export function SearchBar(props: Readonly<SearchBarProps>) {
     return (
         <div className="w-full max-w-sm">

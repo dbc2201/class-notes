@@ -23,6 +23,8 @@ import type {InputProps} from "./InputProps.ts";
  *   required={true}
  *   disabled={false}
  *   error={error}
+ *   className={in parent component developer can add extra classes along with defaults};
+ *   hideLabel={this is used to hide label intentionally}
  * />
  */
 export function Input(props: Readonly<InputProps>) {
@@ -31,16 +33,20 @@ export function Input(props: Readonly<InputProps>) {
 
     return (
         <div>
-            <label htmlFor={id} className="label w-full p-[12px]">
-                <span className="label-text">{props.label}</span>
-            </label>
+            {!props.hideLabel && (
+                <label htmlFor={id} className="label w-full p-[12px]">
+                    <span className="label-text">{props.label ?? ""}</span>
+                </label>
+            )}
 
             <input
                 id={id}
                 type={props.type}
-                value={typeof props.value === "string" || typeof props.value === "number"
-                    ? props.value
-                    : ""}
+                value={
+                    typeof props.value === "string" || typeof props.value === "number"
+                        ? props.value
+                        : ""
+                }
                 onChange={(e) => {
                     // Prevent onChange from firing when the input is disabled.
                     if (!props.disabled) {
@@ -50,10 +56,12 @@ export function Input(props: Readonly<InputProps>) {
                 placeholder={props.placeholder}
                 disabled={props.disabled}
                 required={props.required}
-                className="input input-bordered block"
+                className={`input input-bordered block w-full ${props.className ?? ""}`}
             />
 
-            {props.error && (<span className="text-error text-sm">{props.error}</span>)}
+            {props.error && (
+                <span className="text-error text-sm">{props.error}</span>
+            )}
         </div>
     );
 }

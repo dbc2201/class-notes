@@ -1,7 +1,7 @@
 import type {ChangeEvent} from "react";
 
 export interface InputProps {
-    label: string;
+    label?: string;
     type: 'text' | 'email' | 'password' | 'number';
     value: string | number;
     onChange: (e: ChangeEvent<HTMLInputElement>) => void;
@@ -9,4 +9,6 @@ export interface InputProps {
     error?: string;
     disabled: boolean;
     required: boolean;
+    className?: string;
+    hideLabel?: boolean;
 }

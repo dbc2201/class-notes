@@ -33,9 +33,9 @@ export function Input(props: Readonly<InputProps>) {
 
     return (
         <div>
-            {!props.hideLabel && (
+            {!props.hideLabel && props.label && (
                 <label htmlFor={id} className="label w-full p-[12px]">
-                    <span className="label-text">{props.label ?? ""}</span>
+                    <span className="label-text">{props.label}</span>
                 </label>
             )}
 

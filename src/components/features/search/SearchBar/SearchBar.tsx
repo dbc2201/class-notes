@@ -26,12 +26,29 @@ import type {SearchBarProps} from "./SearchBarProps";
 export function SearchBar(props: Readonly<SearchBarProps>) {
     return (
         <div className="w-full max-w-sm">
-            <div className="relative w-full">
+            <div className="relative w-full" role="search" aria-label="Search">
 
                 {/* Search icon */}
                 <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none z-10">
-  🔍
+  <svg
+      className="h-[1em] opacity-50"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+  >
+    <g
+        strokeLinejoin="round"
+        strokeLinecap="round"
+        strokeWidth="2.5"
+        fill="none"
+        stroke="currentColor"
+    >
+      <circle cx="11" cy="11" r="8"></circle>
+      <path d="m21 21-4.3-4.3"></path>
+    </g>
+  </svg>
 </span>
+
 
                 {/* Input */}
                 <Input
@@ -50,9 +67,14 @@ export function SearchBar(props: Readonly<SearchBarProps>) {
                     <button
                         type="button"
                         onClick={props.onClear}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
+                        aria-label="Clear search"
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-base-content z-10"
                     >
-                        ×
+                        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                             height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                  d="M6 18 17.94 6M18 18 6.06 6"/>
+                        </svg>
                     </button>
                 )}
             </div>

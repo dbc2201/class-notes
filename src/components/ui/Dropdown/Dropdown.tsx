@@ -13,11 +13,11 @@ import type {DropdownProps} from "./DropdownProps.ts";
 export function Dropdown(props: Readonly<DropdownProps>) {
     return (<div className="dropdown">
         {/*Trigger*/}
-        <button type="button" className="btn">
+        <button type="button" className="btn" tabIndex={0}>
             {props.trigger}
         </button>
         {/*Menu*/}
-        <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box">
+        <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box" tabIndex={-1}>
             {props.items.map((item) => (<li key={item.value}>
                     <button
                         type="button"

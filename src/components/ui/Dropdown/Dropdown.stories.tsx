@@ -18,7 +18,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
     args: {
-        trigger: <button className="btn">Open Menu</button>, // ✅ ReactNode
+        trigger: <span>"Open Menu"</span>, // ✅ ReactNode
         items, // ✅ required
         position: "bottom",
     },

@@ -17,6 +17,7 @@ import {TagBadge} from "../../tags/TagBadge/TagBadge.tsx";
  * This component is intentionally non-clickable as a whole; only the action
  * buttons trigger interactions.
  *
+ *
  * @param props - The properties passed to the NoteCard component.
  * @param props.note - The note data containing id, title, tags, author, and creation date.
  * @param props.onEdit - Callback invoked when the Edit button is clicked.

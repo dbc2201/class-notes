@@ -1,6 +1,6 @@
-import { render, screen } from "@testing-library/react";
-import { describe, it, expect } from "vitest";
-import Label from "./Label";
+import {render, screen} from "@testing-library/react";
+import {describe, expect, it} from "vitest";
+import {Label} from "./Label";
 
 describe("Label Atom", () => {
     it("renders the label text correctly", () => {

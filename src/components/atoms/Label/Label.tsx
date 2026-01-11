@@ -7,29 +7,51 @@ const sizeClasses: Record<NonNullable<LabelProps["size"]>, string> = {
     lg: "text-base",
 };
 
-export default function Label(props: Readonly<LabelProps>) {
-    const size = props.size ?? "md";
+/**
+ * A form label component that supports various sizes, required indicators, and disabled states.
+ * @see LabelProps
+ * @example
+ * <Label htmlFor="email" size="lg">
+ *   Email Address
+ * </Label>
+ */
+export default function Label({
+                                  htmlFor,
+                                  children,
+                                  required,
+                                  size = "md",
+                                  disabled,
+                                  className,
+                              }: Readonly<LabelProps>) {
     return (
         <label
-            htmlFor={props.htmlFor}
+            htmlFor={htmlFor}
             className={[
                 "block font-medium text-slate-700 dark:text-slate-300",
                 sizeClasses[size],
-                props.disabled && "opacity-50 cursor-not-allowed",
-                props.className,
+                disabled && "opacity-50 cursor-not-allowed",
+                className,
             ]
                 .filter(Boolean)
                 .join(" ")}
         >
-            {props.children}
+            {children}
 
-            {props.required && (
-                <span
-                    aria-hidden="true"
-                    className="ml-1 text-red-500"
-                >
-          *
-        </span>
+            {required && (
+                <>
+                    {/* Screen readers only */}
+                    <span className="sr-only">(required)</span>
+
+                    {/* Visual required indicator */}
+                    <span
+                        aria-hidden="true"
+                        className="ml-1 text-red-500"
+                    >
+                *
+                </span>
+                </>
+
+
             )}
         </label>
     );

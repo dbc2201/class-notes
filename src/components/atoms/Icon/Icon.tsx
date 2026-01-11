@@ -31,6 +31,17 @@ const icons: Record<string, ReactNode> = {
     ),
 };
 
+/**
+ k * A component for displaying SVG icons.
+ * It renders an icon from a predefined list based on the `name` prop.
+ *
+ * @param {Readonly<IconProps>} props The properties for the Icon component.
+ * @param {string} props.name The name of the icon to display. Must be a key in the `icons` record.
+ * @param {IconSize} [props.size="md"] The size of the icon. Defaults to 'md'.
+ * @param {string} [props.color="currentColor"] The CSS color of the icon. Defaults to 'currentColor'.
+ * @param {string} [props.className] Additional CSS classes to apply to the SVG element.
+ * @returns {JSX.Element | null} The rendered SVG icon as a React element, or `null` if the icon `name` is not found.
+ */
 export function Icon(props: Readonly<IconProps>) {
     const {
         name,

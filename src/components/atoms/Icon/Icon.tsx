@@ -35,6 +35,11 @@ const icons: Record<string, ReactNode> = {
  * A component for displaying SVG icons.
  * It renders an icon from a predefined list based on the `name` prop.
  *
+ * @example
+ *   ```tsx
+ *   <Icon name="search" size="md" color="currentColor" />
+ *   ```
+ *
  * @param {Readonly<IconProps>} props The properties for the Icon component.
  * @param {string} props.name The name of the icon to display. Must be a key in the `icons` record.
  * @param {IconSize} [props.size="md"] The size of the icon. Defaults to 'md'.

@@ -32,7 +32,7 @@ const icons: Record<string, ReactNode> = {
 };
 
 /**
- k * A component for displaying SVG icons.
+ * A component for displaying SVG icons.
  * It renders an icon from a predefined list based on the `name` prop.
  *
  * @param {Readonly<IconProps>} props The properties for the Icon component.

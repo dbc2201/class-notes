@@ -1,7 +1,8 @@
 import type {ChangeEvent} from "react";
 
-export interface InputProps {
-    label: string;
+/* ---------------- BASE PROPS ---------------- */
+
+interface BaseInputProps {
     type: 'text' | 'email' | 'password' | 'number';
     value: string | number;
     onChange: (e: ChangeEvent<HTMLInputElement>) => void;
@@ -9,4 +10,31 @@ export interface InputProps {
     error?: string;
     disabled: boolean;
     required: boolean;
+    className?: string;
 }
+
+/* ---------------- VARIANT 1 ---------------- */
+
+/* Label VISIBLE */
+
+interface InputWithVisibleLabel extends BaseInputProps {
+    hideLabel?: false;
+    label: string;
+    ariaLabel?: string;
+}
+
+/* ---------------- VARIANT 2 ---------------- */
+
+/* Label HIDDEN */
+
+interface InputWithHiddenLabel extends BaseInputProps {
+    hideLabel: true;
+    ariaLabel: string;
+    label?: string;
+}
+
+/* ---------------- FINAL TYPE ---------------- */
+
+export type InputProps =
+    | InputWithVisibleLabel
+    | InputWithHiddenLabel;

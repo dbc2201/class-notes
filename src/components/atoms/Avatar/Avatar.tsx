@@ -1,3 +1,4 @@
+import {useState} from "react";
 import type {AvatarProps, AvatarSize} from "./AvatarProps";
 
 const sizeMap: Record<AvatarSize, number> = {
@@ -8,32 +9,6 @@ const sizeMap: Record<AvatarSize, number> = {
     xl: 72,
 };
 
-/**
- * Renders an Avatar component.
- *
- * This component displays a user's avatar, either from an image URL or a text fallback.
- * It supports various predefined sizes and custom styling via `className`.
- *
- * @param {Readonly<AvatarProps>} props - The properties for the Avatar component.
- * @returns {JSX.Element} The rendered Avatar component.
- *
- * @example
- * // Basic usage with an image
- * <Avatar src="https://example.com/avatar.jpg" alt="User Avatar" />
- *
- * @example
- * // Avatar with a specific size and fallback text
- * <Avatar size="lg" fallback="JD" />
- *
- * @example
- * // Avatar with custom class
- * <Avatar src="https://example.com/avatar.jpg" className="my-custom-avatar" />
- *
- * @example
- * // Avatar with no src and no fallback (will show '?')
- * <Avatar size="sm" />
- */
-
 export function Avatar(props: Readonly<AvatarProps>) {
     const {
         src,
@@ -43,10 +18,14 @@ export function Avatar(props: Readonly<AvatarProps>) {
         className,
     } = props;
 
+    const [hasError, setHasError] = useState(false);
+
     const pixelSize = sizeMap[size];
 
-    // IMAGE RENDER
-    if (src) {
+    const showImage = src && !hasError;
+
+    // IMAGE RENDER (only if no error)
+    if (showImage) {
         return (
             <img
                 src={src}
@@ -54,6 +33,7 @@ export function Avatar(props: Readonly<AvatarProps>) {
                 width={pixelSize}
                 height={pixelSize}
                 className={className}
+                onError={() => setHasError(true)}
                 style={{
                     borderRadius: "50%",
                     objectFit: "cover",
@@ -74,7 +54,7 @@ export function Avatar(props: Readonly<AvatarProps>) {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                backgroundColor: "#e5e7eb", // neutral gray
+                backgroundColor: "#e5e7eb",
                 color: "#374151",
                 fontWeight: 600,
                 fontSize: Math.floor(pixelSize / 2.5),

@@ -8,7 +8,6 @@ import type {NotePreviewProps} from "./NotePreviewProps.ts";
  *
  * @param props - The component properties.
  * @param props.content - The text content of the note. Defaults to an empty string if null or undefined.
- * @param props.maxLength - The maximum number of characters to display before the text is sliced.
  * @returns The rendered note preview element.
  */
 export function NotePreview(props: Readonly<NotePreviewProps>) {

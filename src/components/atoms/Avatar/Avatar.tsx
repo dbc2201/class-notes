@@ -9,6 +9,32 @@ const sizeMap: Record<AvatarSize, number> = {
     xl: 72,
 };
 
+/**
+ * Renders an Avatar component.
+ *
+ * This component displays a user's avatar, either from an image URL or a text fallback.
+ * It supports various predefined sizes and custom styling via `className`.
+ *
+ * @param {Readonly<AvatarProps>} props - The properties for the Avatar component.
+ * @returns {JSX.Element} The rendered Avatar component.
+ *
+ * @example
+ * // Basic usage with an image
+ * <Avatar src="https://example.com/avatar.jpg" alt="User Avatar" />
+ *
+ * @example
+ * // Avatar with a specific size and fallback text
+ * <Avatar size="lg" fallback="JD" />
+ *
+ * @example
+ * // Avatar with custom class
+ * <Avatar src="https://example.com/avatar.jpg" className="my-custom-avatar" />
+ *
+ * @example
+ * // Avatar with no src and no fallback (will show '?')
+ * <Avatar size="sm" />
+ */
+
 export function Avatar(props: Readonly<AvatarProps>) {
     const {
         src,

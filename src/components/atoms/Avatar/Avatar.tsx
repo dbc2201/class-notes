@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import type {AvatarProps, AvatarSize} from "./AvatarProps";
 
 const sizeMap: Record<AvatarSize, number> = {
@@ -12,29 +12,24 @@ const sizeMap: Record<AvatarSize, number> = {
 /**
  * Renders an Avatar component.
  *
- * This component displays a user's avatar, either from an image URL or a text fallback.
- * It supports various predefined sizes and custom styling via `className`.
+ * Displays a user profile image when `src` is provided.
+ * Falls back to initials or a placeholder when the image is missing or fails to load.
  *
- * @param {Readonly<AvatarProps>} props - The properties for the Avatar component.
- * @returns {JSX.Element} The rendered Avatar component.
+ * @param {Readonly<AvatarProps>} props - Avatar properties
+ * @returns {React.ReactNode} Rendered avatar
  *
  * @example
- * // Basic usage with an image
  * <Avatar src="https://example.com/avatar.jpg" alt="User Avatar" />
  *
  * @example
- * // Avatar with a specific size and fallback text
  * <Avatar size="lg" fallback="JD" />
  *
  * @example
- * // Avatar with custom class
- * <Avatar src="https://example.com/avatar.jpg" className="my-custom-avatar" />
+ * <Avatar src="https://example.com/avatar.jpg" className="my-avatar" />
  *
  * @example
- * // Avatar with no src and no fallback (will show '?')
  * <Avatar size="sm" />
  */
-
 export function Avatar(props: Readonly<AvatarProps>) {
     const {
         src,
@@ -46,11 +41,15 @@ export function Avatar(props: Readonly<AvatarProps>) {
 
     const [hasError, setHasError] = useState(false);
 
+    // Reset error state when image source changes
+    useEffect(() => {
+        setHasError(false);
+    }, [src]);
+
     const pixelSize = sizeMap[size];
+    const showImage = Boolean(src) && !hasError;
 
-    const showImage = src && !hasError;
-
-    // IMAGE RENDER (only if no error)
+    // IMAGE RENDER
     if (showImage) {
         return (
             <img
@@ -59,7 +58,11 @@ export function Avatar(props: Readonly<AvatarProps>) {
                 width={pixelSize}
                 height={pixelSize}
                 className={className}
-                onError={() => setHasError(true)}
+                onError={(e) => {
+                    // prevent infinite error loop
+                    e.currentTarget.onerror = null;
+                    setHasError(true);
+                }}
                 style={{
                     borderRadius: "50%",
                     objectFit: "cover",
